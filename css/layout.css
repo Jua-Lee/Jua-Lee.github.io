@@ -1,0 +1,755 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'Recipekorea';
+  src: url('/portfolio/font/RecipekoreaM.eot');
+  src: url('/portfolio/font/RecipekoreaM.eot?#iefix') format('embedded-opentype'),
+      url('/portfolio/font/RecipekoreaM.woff') format('woff'),
+      url('/portfolio/font/RecipekoreaM.ttf') format('truetype'),
+      url('/portfolio/font/RecipekoreaM.svg#RecipekoreaM') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+/*common*/
+*{
+  box-sizing: border-box;
+}
+body, p, h1, h2, h3, h4, h5, h6, div, header, section, article, footer, nav, aside, address, figure, dl, dt, dd, form, input, select{
+  margin: 0; padding: 0;
+}
+ol, ul, li{
+  margin: 0; padding: 0;
+  list-style: none;
+}
+html, body{
+  scroll-behavior: smooth;
+  /*font*/
+  font-family: 'Noto Sans KR', '맑은 고딕', 'Malgun Gothic', 'Gothic';
+  font-weight: 400;
+  color: #333;
+  font-size: 10px;
+}
+h1, h2, h3, h4, h5, h6, strong, b{
+  font-size: 10px;
+  font-weight: 400;
+}
+a:link, a:visited, a:hover, a:active{
+  text-decoration: none;
+  color: #333;
+}
+i, em, address{
+  font-style: normal;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+button{
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+.clearfix::before, .clearfix::after{
+  display: block;
+  content: '';
+  clear: both;
+}
+
+/* layout */
+
+/* header */
+#header{
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+  /* background: linear-gradient(22deg, rgb(234, 201, 240) 0%, rgb(159, 185, 255) 100%); */
+  backdrop-filter: blur(5px);
+}
+#header .header_wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 85%;
+  height: 80px;
+}
+
+/* logo */
+#header .header_wrap h1{
+  font-family: 'Recipekorea';
+}
+#header .header_wrap h1 a{
+  display: block;
+  font-size: 2.4rem;
+}
+
+/* nav */
+#header .header_wrap nav{
+  width: 60%;
+}
+#header .header_wrap nav ul.gnb{
+  display: flex;
+  justify-content: space-between;
+}
+#header .header_wrap nav ul.gnb li a{
+  display: block;
+  font-family: 'Roboto';
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.gnb li a::after {
+  display: block;
+  content: ''; 
+  width: 0; 
+  height: 2px; 
+  background-color: #53a3dc;
+  transition: width .5s;
+}
+.gnb li:hover a::after{
+  width: 100%
+}
+
+/* main */
+#container #main{
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  background: url(/portfolio/images/main/img_mainbg.jpg) no-repeat center;
+  /* background: linear-gradient(22deg, rgb(234, 201, 240) 0%, rgb(159, 185, 255) 100%); */
+}
+
+/* main title */
+#main h2{
+  padding: 35vh 0 25vh;
+  font-family: 'Recipekorea';
+  font-size: 3.8rem;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+#main h2 span.typing-txt{
+  display: none;
+}
+.typing {  
+  display: inline-block; 
+}
+#main h2 strong{
+  display: block;
+  margin-top: 30px;
+  line-height: 1.4;
+  opacity: 0;
+  font-family: 'Recipekorea';
+  font-size: 3.8rem;
+  letter-spacing: 0.1em;
+  color: #fff;
+  animation: textup 1s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+@keyframes textup {
+  0% {transform: translateY(50%); opacity: 0}
+  100% {transform: translateY(0%); opacity: 1}
+}
+
+
+/* scroll */
+#main .scroll{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#main .scroll .mouse{
+  position: relative;
+  width: 25px;
+  height: 50px;
+  border: 2px solid #333;;
+  border-radius: 25px;
+}
+#main .scroll .mouse::before{
+  position: absolute;
+  content: '';
+  top: 8px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 10px;
+  height: 10px;
+  background-color: #333;;
+  border-radius: 50%;
+  animation: slide_bottom 2s infinite;
+  -webkit-animation: slide_bottom 2s infinite;
+}
+#main .scroll .scroll_down{
+  margin-top: 10px;
+  font-size: 1.4rem;
+  color: #333;
+}
+@keyframes slide_bottom {
+	to {
+		opacity: 0;
+		top: 35px;
+	}
+}
+@-webkit-keyframes slide_bottom {
+	to {
+		opacity: 0;
+		top: 35px;
+	}
+}
+
+/* about */
+#about{
+  margin: 100px auto;
+  width: 85%;
+  height: 100%;
+  text-align: center;
+}
+h3{
+  margin-bottom: 50px;
+  font-family: 'Recipekorea';
+  font-size: 3.2rem;
+}
+
+/* profile */ 
+#about .profile_wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+/* profile 좌측 */
+#about .profile_wrap .profile{
+  display: flex;
+  justify-content: center;
+  width: 28%;
+  padding-top: 60px;
+  height: auto;
+  border-radius: 52px;
+  box-shadow: 2px 2px 25px rgb(203 217 255 / 30%);
+  text-align: center;
+}
+#about .profile_wrap .profile_right{
+  width: calc(72% - 76px);
+}
+#about .profile_wrap .profile .profile_cont{
+  width: 100%;
+  text-align: center;
+}
+#about .profile_wrap .profile .profile_img{
+  margin: 0 auto 25px;
+  display: block;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: url(/portfolio/images/main/img_profile.jpg) no-repeat center 0;
+  background-size: 100%;
+}
+#about .profile_wrap .profile p{
+  margin-bottom: 5px;
+  font-size: 1.6rem;
+}
+#about .profile_wrap .profile p:first-child{
+  font-size: 2.0rem;
+  font-weight: 700;
+}
+#about .profile_wrap .profile a{
+  display: block;
+  margin-top: 15px;
+  padding: 8px 10px;
+  border: 1px solid #8988ff;
+  border-radius: 5px;
+}
+#about .profile_wrap .profile a span{
+  font-size: 1.6rem;
+  color: #8988ff;
+}
+#about .profile_wrap .profile a:hover{
+  background-color: #8988ff;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+#about .profile_wrap .profile a:hover span{
+  color: #fff;
+  font-weight: 600;
+}
+
+/* profile 우측 */
+#about .profile_wrap .profile_cont .profile_right{
+  height: auto;
+}
+#about .profile_wrap .profile_cont{
+  margin-bottom: 35px;
+  text-align: left;
+}
+#about .profile_wrap .profile_cont span.introduce_tit{
+  display: block;
+  margin-bottom: 15px;
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+#about .profile_wrap .profile_cont span.introduce{
+  font-size: 1.8rem;
+  line-height: 30px;
+  word-break: keep-all;
+}
+
+/* skill */
+#about .profile_wrap h3{
+  margin: 100px 0 0;
+  width: 100%;
+  text-align: center;
+}
+#about ul.skills{
+  display: flex;
+  flex-wrap: wrap;
+  clear: both;
+  margin-top: 60px;
+  width: 100%;
+}
+#about ul.skills li{
+  width: calc(100% / 5);
+}
+
+/* skills svg */
+#about .skill_svg {
+  position: relative;
+}
+#about .skill_svg::before{
+  position: absolute;
+  content: 'HTML';
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3.0rem;
+  font-family: 'Recipekorea';
+  color: transparent;
+  -webkit-text-stroke: 1px #555;
+  font-weight: 700;
+}
+#about .skill:nth-child(2) .skill_svg::before{
+  content: 'CSS';
+}
+#about .skill:nth-child(3) .skill_svg::before{
+  content: 'JAVASCRIPT';
+  font-size: 2.6rem;
+}
+#about .skill:nth-child(4) .skill_svg::before{
+  content: 'PHOTOSHOP';
+  font-size: 2.6rem;
+}
+#about .skill:last-child .skill_svg::before{
+  content: 'ADOBE XD';
+}
+#about .skill_svg svg {
+  width: 100%;
+  height: 260px;
+  stroke: #53a3dc;
+  stroke-width: 2px;
+  fill: transparent;
+}
+.circle_b {
+  transform-origin: center;
+  stroke: rgba(83,163,220,0.4);
+  stroke-width: 15px;
+  animation: circle_b 4s ease infinite;
+}
+@keyframes circle_b {
+    0% {opacity: 0}
+    50% {opacity: 1}
+    100% {opacity: 0}
+}
+.circle_s {
+  stroke-dasharray: 3.5;
+  transform-origin: center;
+  animation: circle_s 2s linear infinite;
+}
+@keyframes circle_s {
+  0% {transform: rotate(0deg)}
+  100% {transform: rotate(360deg)}
+}
+.circle_1,
+.circle_2,
+.circle_3 {stroke-dasharray: 3.5;
+    animation: circle_1 2s linear infinite alternate;
+}
+.circle_2 {animation-name: circle_2}
+.circle_3 {animation-name: circle_3}
+@keyframes circle_1 {to {transform: translate(0, 17%)}}
+@keyframes circle_2 {to {transform: translate(15%, -17%)}}
+@keyframes circle_3 {to {transform: translate(-15%, -17%)}}
+.circle_u{
+  stroke-dasharray: 3.5;
+  transform-origin: center;
+  animation: circle_u 3s ease infinite;
+}
+@keyframes circle_u {
+  0% {transform: scale(0.8)}
+  50% {transform: scale(1)}
+  100% {transform: scale(0.8)}
+}
+.circle_d {
+  animation: circle_d 2.5s linear infinite alternate}
+.circle_n {
+  stroke-dasharray: 3.5;
+  animation: circle_n 2.5s linear infinite alternate;
+}
+@keyframes circle_d {to {transform: translate(30%,30%)}}
+@keyframes circle_n {to {transform: translate(-30%,-30%)}}
+
+/* skill percent */
+#about ul.skills li span.skills-num{
+  text-align: center;
+  line-height: 80px;
+  font-size: 5.6rem;
+  font-weight: 600;
+  color: #222;
+}
+#about ul.skills li span.percent{
+  font-size: 2.4rem;
+  color: #222;
+}
+#about ul.skills li span.skill_tit{
+  display: none;
+  font-size: 2.0rem;
+  line-height: 50px;
+}
+
+/* portfolio */
+#portfolio{
+  margin: 100px auto;
+  width: 85%;
+  text-align: center;
+}
+
+/* project */
+#portfolio .project{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 100px;
+}
+
+/* project num */
+#portfolio .project .num{
+  position: sticky;
+  top: 150px;
+  z-index: 10;
+  width: 25%;
+  height: 100%;
+  font-size: 12vw;
+  line-height: 0.78;
+  font-family: 'Recipekorea';
+  color: transparent;
+  -webkit-text-stroke: 1px #53a3dc;
+  transition: .5s ease-in-out
+}
+#portfolio .project.active .num{
+  color: #53a3dc;
+}
+#portfolio .project .project_cont{
+  width: 70%;
+}
+
+/* project img */
+#portfolio .project .project_cont figure{
+  display: block;
+  margin: 0 auto 15px;
+  width: 85%;
+}
+#portfolio .project .project_cont figure img{
+  display: block;
+  width: 100%;
+}
+
+/* project content */
+.project .project_cont .project_desc{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  text-align: left;
+  border-top: 1px solid #dedede;
+}
+.project .project_cont .project_desc h5{
+  margin-top: 15px;
+  font-family: 'Recipekorea';
+  font-size: 2.8rem;
+}
+.project .project_cont .project_desc p{
+  margin-top: 15px;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+a.port_button{
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 10px;
+  border: 1px solid #8988ff;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  color: #8988ff;
+}
+a.port_button:first-child{
+  margin-right: 15px;
+}
+a.port_button:hover{
+  background-color: #8988ff;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* contact */
+#contact{
+  width: 100%;
+  background-color: #f6f6ff;
+}
+#contact .contact_area{
+  margin: 0 auto;
+  padding: 200px 0;
+  width: 85%;
+  text-align: center;
+}
+#contact .contact_area h3{
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+}
+#contact .contact_area h3::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -85%) rotate(45deg);
+  width: 10px; height: 20px;
+  border-right: 5px solid #8988ff; border-bottom: 5px solid #8988ff;
+}
+#contact .contact_area a{
+  display: block;
+  font-size: 7.6rem;
+}
+#contact .contact_area a:hover{
+  color: #8988ff;
+  font-size: 7.4rem;
+  transition: all 0.4s;
+}
+#contact .contact_area span{
+  display: block;
+  margin-top: 20px;
+  font-size: 1.6rem;
+  color: #747474;
+}
+
+/* footer */
+#footer{
+  position: relative;
+  width: 100%;
+  padding: 35px 0;
+  background-color: #3586ff;
+  text-align: center;
+}
+#footer .thank{
+  font-size: 1.2rem;
+  color: #fff;
+}
+#footer .copyright{
+  margin-top: 5px;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+/* wave footer */
+footer .wave{
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(/portfolio/images/main/wave.png);
+  background-size: 1000px 100px;
+}
+footer .wave#wave1{
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWave 4s linear infinite;
+}
+footer .wave#wave2{
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animateWave_02 4s linear infinite;
+}
+footer .wave#wave3{
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWave 3s linear infinite;
+}
+footer .wave#wave4{
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animateWave_02 3s linear infinite;
+}
+@keyframes animateWave{
+  0%{
+    background-position-x: 1000px;
+  }
+  100%{
+    background-position-x: 0px;
+  }
+}
+@keyframes animateWave_02{
+  0%{
+    background-position-x: 0px;
+  }
+  100%{
+    background-position-x: 1000px;
+  }
+}
+
+
+/* media query */
+
+/* max-width : 1265px */
+@media screen and (max-width: 1265px) {
+  /* profile 좌측 */
+  #about .profile_wrap .profile{
+    display: flex;
+    justify-content: center;
+    margin-right: 50px;
+    width: 28%;
+    padding-top: 60px;
+    height: auto;
+    border-radius: 52px;
+    box-shadow: none;
+    text-align: center;
+  }
+  /* profile 우측 상단 */
+  #about .profile_wrap .profile_cont span.introduce_tit{
+    font-size: 2.0rem;
+  }
+  /* profile 우측 하단 */
+  #about .profile_wrap .profile_cont span.introduce{
+    font-size: 1.6rem;
+  }
+}
+
+/* max-width : 1024px */
+@media screen and (max-width: 1024px) {
+  /* profile 좌측 */
+  #about .profile_wrap .profile p:nth-child(2){
+    font-size: 1.8rem;
+  }
+  #about .profile_wrap .profile p{
+    font-size: 1.4rem;
+  }
+  /* project number */
+  .project .project_cont .project_desc h5{
+    font-size: 2.0rem;
+  }
+  /* project 설명 */
+  .project .project_cont .project_desc p{
+    display: none;
+  }
+} 
+
+/* max-width : 925px */
+@media screen and (max-width: 925px) {
+  /* profile 우측 상단 */
+  #about .profile_wrap .profile_cont span.introduce_tit{
+    font-size: 1.8rem;
+  }
+  /* project cont */
+  .project .project_cont .project_desc{
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  /* project btn */
+  .project .project_cont .project_desc .project_btn{
+    align-self: flex-end;
+  }
+  /* contact email */
+  #contact .contact_area a{
+    font-size: 5.0rem;
+    font-weight: 700;
+    color: #53a3dc;
+  }
+  #contact .contact_area a:hover{
+    font-size: 5.0rem;
+  }
+}
+
+/* max-width : 768px */
+@media screen and (max-width: 768px) {
+  /* nav */
+  #header .header_wrap nav ul.gnb li a{
+    font-size: 1.4rem;
+  }
+}
+
+/* max-width : 635px */
+@media screen and (max-width: 635px) {
+  /* profile */
+  #about .profile_wrap{
+    flex-direction: column;
+  }
+  /* profile 좌측 */
+  #about .profile_wrap .profile{
+    display: none;
+  }
+  /* contact tit */
+  #contact .contact_area h3{
+    margin-bottom: 25px;
+    font-size: 2.0rem;
+  }
+  /* contact email */
+  #contact .contact_area a{
+    font-size: 3.4rem;
+  }
+  #contact .contact_area span{
+    font-size: 1.4rem;
+  }
+}
+
+/* max-width : 431px */
+@media screen and (max-width: 431px) {
+  /* main */
+  #main h2{
+    padding: 30vh 0 25vh;
+    font-size: 2.8rem;
+  }
+  /* skill span */
+  #about ul.skills li span.skill_tit{
+    font-size: 1.2rem;
+  }
+  /* project btn */
+  .project_btn a.port_button{
+    font-size: 1.4rem;
+  }
+  /* contact tit */
+  #contact .contact_area h3{
+    font-size: 1.5rem;
+  }
+  /* contact email */
+  #contact .contact_area a{
+    font-size: 2.2rem;
+  }
+}
