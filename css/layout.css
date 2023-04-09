@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'Recipekorea';
-  src: url('/portfolio/font/RecipekoreaM.eot');
-  src: url('/portfolio/font/RecipekoreaM.eot?#iefix') format('embedded-opentype'),
-      url('/portfolio/font/RecipekoreaM.woff') format('woff'),
-      url('/portfolio/font/RecipekoreaM.ttf') format('truetype'),
-      url('/portfolio/font/RecipekoreaM.svg#RecipekoreaM') format('svg');
+  src: url('/font/RecipekoreaM.eot');
+  src: url('/font/RecipekoreaM.eot?#iefix') format('embedded-opentype'),
+      url('/font/RecipekoreaM.woff') format('woff'),
+      url('/font/RecipekoreaM.ttf') format('truetype'),
+      url('/font/RecipekoreaM.svg#RecipekoreaM') format('svg');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -121,7 +121,7 @@ button{
   width: 100%;
   height: 100vh;
   text-align: center;
-  background: url(/portfolio/images/main/img_mainbg.jpg) no-repeat center;
+  background: url(/images/main/img_mainbg.jpg) no-repeat center;
   /* background: linear-gradient(22deg, rgb(234, 201, 240) 0%, rgb(159, 185, 255) 100%); */
 }
 
@@ -248,7 +248,7 @@ h3{
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  background: url(/portfolio/images/main/img_profile.jpg) no-repeat center 0;
+  background: url(/images/main/img_profile.jpg) no-repeat center 0;
   background-size: 100%;
 }
 #about .profile_wrap .profile p{
@@ -580,7 +580,7 @@ footer .wave{
   left: 0;
   width: 100%;
   height: 100px;
-  background: url(/portfolio/images/main/wave.png);
+  background: url(/images/main/wave.png);
   background-size: 1000px 100px;
 }
 footer .wave#wave1{
