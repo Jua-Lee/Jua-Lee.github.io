@@ -1,45 +1,49 @@
 @charset "utf-8";
 
-@font-face {
-  font-family: 'Recipekorea';
-  src: url('/font/RecipekoreaM.eot');
-  src: url('/font/RecipekoreaM.eot?#iefix') format('embedded-opentype'),
-      url('/font/RecipekoreaM.woff') format('woff'),
-      url('/font/RecipekoreaM.ttf') format('truetype'),
-      url('/font/RecipekoreaM.svg#RecipekoreaM') format('svg');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-
+/*
+font-family: 'Noto Serif KR', serif;
+font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Pretendard Variable', Pretendard, serif;
+*/
 
 /*common*/
 *{
   box-sizing: border-box;
 }
 body, p, h1, h2, h3, h4, h5, h6, div, header, section, article, footer, nav, aside, address, figure, dl, dt, dd, form, input, select{
-  margin: 0; padding: 0;
+  margin: 0;
+  padding: 0;
 }
 ol, ul, li{
-  margin: 0; padding: 0;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 html, body{
   scroll-behavior: smooth;
   /*font*/
-  font-family: 'Noto Sans KR', '맑은 고딕', 'Malgun Gothic', 'Gothic';
+  font-family: 'Noto Sans KR', '맑은 고딕', 'Malgun Gothic', 'Gothic', sans-serif;
   font-weight: 400;
-  color: #333;
   font-size: 10px;
+  color: #111;
 }
 h1, h2, h3, h4, h5, h6, strong, b{
   font-size: 10px;
   font-weight: 400;
+  color: #111;
+}
+a{
+  display: inline-block;
+  color: inherit;
 }
 a:link, a:visited, a:hover, a:active{
   text-decoration: none;
-  color: #333;
+  color: inherit;
+}
+img{
+  display: inline-block;
 }
 i, em, address{
   font-style: normal;
@@ -58,56 +62,65 @@ button{
   content: '';
   clear: both;
 }
+.notoserif{
+  font-family: 'Noto Serif KR', serif;
+}
+.pretend{
+  font-family: 'Pretendard Variable', Pretendard, serif;
+}
+.poppins{
+  font-family: 'Poppins', sans-serif;
+}
+.playfair{
+  font-family: 'Playfair Display', serif;
+}
+.upper{
+  text-transform: uppercase;
+}
+.blue{
+  color: #0b6feb;
+}
 
-/* layout */
+.inner{
+  width: 90%;
+  max-width: 1540px;
+  margin: auto;
+}
 
 /* header */
 #header{
   position: fixed;
-  z-index: 10000;
+  z-index: 100;
   width: 100%;
-  border-bottom: 1px solid #fff;
-  /* background: linear-gradient(22deg, rgb(234, 201, 240) 0%, rgb(159, 185, 255) 100%); */
-  backdrop-filter: blur(5px);
+  background-color: #fff;
+  box-shadow: 2px 2px 25px rgba(0,0,0,0.07);
 }
 #header .header_wrap{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
-  width: 85%;
-  height: 80px;
-}
-
-/* logo */
-#header .header_wrap h1{
-  font-family: 'Recipekorea';
-}
-#header .header_wrap h1 a{
-  display: block;
-  font-size: 2.4rem;
-}
-
-/* nav */
-#header .header_wrap nav{
-  width: 60%;
+  height: 75px;
 }
 #header .header_wrap nav ul.gnb{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
 }
-#header .header_wrap nav ul.gnb li a{
-  display: block;
-  font-family: 'Roboto';
-  font-size: 1.8rem;
-  font-weight: 700;
+.gnb li a{
+  font-weight: 500;
+  font-size: 2rem;
+  transition: all .5s;
+}
+.gnb li a:hover{
+  color: #0b6feb;
 }
 .gnb li a::after {
   display: block;
   content: ''; 
   width: 0; 
   height: 2px; 
-  background-color: #53a3dc;
+  background-color: #0b6feb;
   transition: width .5s;
 }
 .gnb li:hover a::after{
@@ -116,46 +129,57 @@ button{
 
 /* main */
 #container #main{
+  padding-top: 10vh;
   position: relative;
   z-index: 1;
   width: 100%;
   height: 100vh;
   text-align: center;
-  background: url(/images/main/img_mainbg.jpg) no-repeat center;
-  /* background: linear-gradient(22deg, rgb(234, 201, 240) 0%, rgb(159, 185, 255) 100%); */
 }
-
-/* main title */
-#main h2{
-  padding: 35vh 0 25vh;
-  font-family: 'Recipekorea';
-  font-size: 3.8rem;
-  letter-spacing: 0.1em;
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+}
+.text{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  font-size: 14.4rem;
+  font-weight: 900;
+  letter-spacing: -.025em;
+  line-height: 130%;
+  margin: 0;
+  width: 100%;
+  color: rgb(32, 32, 32, 0.2);
+  background: linear-gradient(to right, #202020, #202020) no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 0%;
+  transition: background-size cubic-bezier(.1,.5,.5,1) 0.5s;
+  border-bottom: 1px solid #2f2b28;
+}
+.text span{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #0b6feb;
   color: #fff;
+  text-align: left;
+  clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+  transform-origin: center;
+  transition: all cubic-bezier(.1,.5,.5,1) 0.4s;
 }
-#main h2 span.typing-txt{
-  display: none;
+.text:hover > span{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
-.typing {  
-  display: inline-block; 
-}
-#main h2 strong{
-  display: block;
-  margin-top: 30px;
-  line-height: 1.4;
-  opacity: 0;
-  font-family: 'Recipekorea';
-  font-size: 3.8rem;
-  letter-spacing: 0.1em;
-  color: #fff;
-  animation: textup 1s ease-in-out forwards;
-  animation-delay: 0.3s;
-}
-@keyframes textup {
-  0% {transform: translateY(50%); opacity: 0}
-  100% {transform: translateY(0%); opacity: 1}
-}
-
 
 /* scroll */
 #main .scroll{
