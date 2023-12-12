@@ -1,3 +1,4 @@
+
 gsap.registerPlugin(ScrollTrigger);
 
 const textElements = gsap.utils.toArray('.text');
