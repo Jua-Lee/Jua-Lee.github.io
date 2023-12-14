@@ -1,0 +1,35 @@
+@media screen and (max-width: 1599px){
+	#portfolio .port_list {
+		gap: 62px;
+	}
+
+	#portfolio .port_list > li {
+		flex: 1 0 calc(100%/3 - 62px);
+	}
+}
+
+@media screen and (max-width: 1366px){
+	html, body {
+		font-size: 8px;
+	}
+}
+
+@media screen and (max-width: 1200px){
+	#about .profile_wrap {
+		gap: 80px;
+	}
+
+	#about .profile_wrap .profile {
+		width: 360px;
+		height: 380px;
+	}
+
+	#skill ul.skills {
+		gap: 60px 0;
+		justify-content: center;
+	}
+
+	#skill ul.skills li {
+		width: 33.33%;
+	}
+}

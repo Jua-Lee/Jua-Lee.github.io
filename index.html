@@ -12,6 +12,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+  <script src="https://unpkg.com/split-type"></script>
+
+  <!-- aos -->
+  <link rel="stylesheet" href="/css/aos.css">
+  <script src="/script/aos.js"></script>
 
   <!-- fonts -->
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
@@ -21,15 +26,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/mobile.css">
 </head>
 
 <body>
+  <script>
+    AOS.init({
+      duration: 1000,
+    });
+  </script>
   <div id="wrap">
     <!-- header -->
     <header id="header">
       <div class="header_wrap inner">
         <h1>
-          <a href="/portfolio/index.html">
+          <a href="/">
             <img src="/images/logo.png" alt="이민주 포트폴리오">
           </a>
         </h1>
@@ -38,7 +49,7 @@
             <li><a href="#main" class="upper playfair">home</a></li>
             <li><a href="#about" class="upper playfair">about</a></li>
             <li><a href="#skill" class="upper playfair">skill</a></li>
-            <li><a href="#work" class="upper playfair">work</a></li>
+            <li><a href="#portfolio" class="upper playfair">work</a></li>
             <li><a href="#contact" class="upper playfair">contact</a></li>
           </ul>
         </nav>
@@ -61,40 +72,44 @@
         </div>
       </section>
       <!-- about -->
-      <section id="about" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-delay="50" data-aos-easing="ease-in-out"
-      data-duration="2000">
-        <h3>About</h3>
-        <div class="profile_wrap">
-          <div class="profile">
-            <div class="profile_cont">
-              <strong class="profile_img"></strong>
-              <div class="profile_cont">
-                <p>이민주</p>
-                <p>1996.05.04</p>
-                <p>010-9315-1677</p>
-                <p>manju0504@naver.com</p>
-                <!-- <a href="#"><span>이력서 (링크)</span></a> -->
+      <section id="about">
+        <div class="inner">
+          <h3 class="notoserif split">who am i?</h3>
+          <div class="profile_wrap">
+            <div class="profile" data-aos="fade-up">
+              <div class="profile_inner">
+                <strong class="profile_img"></strong>
+                <div class="profile_cont">
+                  <p>이민주</p>
+                  <p>1996.05.04</p>
+                  <p>010-9315-1677</p>
+                  <p>manju0504@naver.com</p>
+                </div>
               </div>
             </div>
+            <div class="profile_right" data-aos="fade-up">
+              <p class="rignt_inner">
+                <span class="introduce_tit">"도전을 두려워하지 않으며 성장하는 퍼블리셔입니다." </span>
+                <span class="introduce">
+                  제 손을 통해 웹사이트가 제작되는 과정이 즐거워 웹에 대한 지식을 쌓아왔습니다. <br>
+                  저는 의사소통 능력과 문제 해결 능력에 탁월한 모습을 보여드릴 수 있습니다. 또한 새로운 도전을 두려워하지 않으며 끊임없이 질문하고 
+                  연구하고자 합니다. <br>
+                  지각 하지 않고 근면성실하게 다니며 기획, 분석, 설계, 구현, 테스트 등 하나의 프로젝트를 수행하기 위해 팀원들과 함께 수행해 나가며 
+                  웹퍼블러셔로서 포트폴리오를 계속해서 쌓아가고 있습니다.  <br>
+                  함께 소통하고 성장해 나가며, 현재에 안주하지 않고 끊임없이 발전해나가는 모습을 보여드리도록 하겠습니다. <br>
+                  혹여 부족한 부분이 있더라도 항상 노력하고 공부하며 시간이 지날수록 발전하고 기대되는 이민주가 되도록 노력하겠습니다.
+                </span>
+              </p>
+            </div>
           </div>
-          <div class="profile_right">
-            <p class="profile_cont">
-              <span class="introduce_tit">"도전을 두려워하지 않으며 성장하는 퍼블리셔입니다." </span>
-              <span class="introduce">
-                제 손을 통해 웹사이트가 제작되는 과정이 즐거워 '반응형 웹&앱 개발자 양성과정'을 수료하며 웹에 대한 지식을 쌓아왔습니다.
-                저는 의사소통 능력과 문제 해결 능력에 탁월한 모습을 보여드릴 수 있습니다.
-                또한 새로운 도전을 두려워하지 않으며 끊임없이 질문하고 연구하는 퍼블리셔가 되고자 합니다.
-                지각 하지 않고 근면성실하게 다니며 과정 중에 웹디자인 기능사에 합격했으며 기획, 분석, 설계, 구현, 테스트 등 하나의 프로젝트를 수행하기 위한 일련의 과정들을 성실하게 수행해 나가며 저만의 포트폴리오를 계속해서 쌓아가고 있습니다.
-                팀원과 소통하며 함께 성장해 나가며, 창의적인 생각과 아이디어를 바탕으로 함께 발전해나가는 모습을 보여드리도록 하겠습니다.<br>
-                부족한 부분이 있더라도 항상 노력하고 공부하며 시간이 지날수록 발전하고 기대되는 이민주가 되도록 노력하겠습니다.
-              </span>
-            </p>
-          </div>
-          <div class="skill_desc" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-delay="50" data-aos-easing="ease-in-out"
-          data-duration="2000">
-            <h3>Skills</h3>
+        </div>
+      </section>
+      <section id="skill">
+        <div class="inner">
+          <div class="skill_desc">
+            <h3 class="notoserif split">Skills</h3>
             <ul class="skills">
-              <li class="skill">
+              <li class="skill" data-aos="fade-up">
                 <div class="skill_svg">
                   <svg>
                       <circle class="circle_s" r="40%" cx="50%" cy="50%" />
@@ -103,12 +118,12 @@
                   </svg>
                 </div>
                 <div class="skill_txt">
-                  <span class="skills-num counter">95</span>
-                  <span class="percent">%</span>
-                  <span class="skill_tit">HTML</span>
+                  <span class="skills-num poppins">95</span>
+                  <span class="percent poppins">%</span>
+                  <span class="skill_tit poppins">HTML</span>
                 </div>
               </li>
-              <li class="skill">
+              <li class="skill" data-aos="fade-up" data-aos-delay="300">
                 <div class="skill_svg">
                   <svg>
                       <circle class="circle" r="40%" cx="50%" cy="50%" />
@@ -117,12 +132,12 @@
                   </svg>
                 </div>
                 <div class="skill_txt">
-                  <span class="skills-num counter">95</span>
-                  <span class="percent">%</span>
-                  <span class="skill_tit">CSS</span>              
+                  <span class="skills-num poppins">95</span>
+                  <span class="percent poppins">%</span>
+                  <span class="skill_tit poppins">CSS</span>              
                 </div>
               </li>
-              <li class="skill">
+              <li class="skill" data-aos="fade-up" data-aos-delay="600">
                 <div class="skill_svg">
                   <svg>
                       <circle class="circle_1" r="25%" cx="50%" cy="33%" />
@@ -131,12 +146,12 @@
                   </svg>
                 </div>
                 <div class="skill_txt">
-                  <span class="skills-num counter">80</span>
-                  <span class="percent">%</span>
-                  <span class="skill_tit">Javascript</span>              
+                  <span class="skills-num poppins">80</span>
+                  <span class="percent poppins">%</span>
+                  <span class="skill_tit poppins">Javascript</span>              
                 </div>
               </li>
-              <li class="skill">
+              <li class="skill" data-aos="fade-up" data-aos-delay="900">
                 <div class="skill_svg">
                     <svg>
                       <circle class="circle_u" r="20%" cx="50%" cy="50%" />
@@ -145,12 +160,12 @@
                     </svg>
                 </div>
                 <div class="skill_txt">
-                  <span class="skills-num counter">90</span>
-                  <span class="percent">%</span>
-                  <span class="skill_tit">Adobe Photoshop</span>              
+                  <span class="skills-num counter poppins">90</span>
+                  <span class="percent poppins">%</span>
+                  <span class="skill_tit poppins">Adobe Photoshop</span>              
                 </div>
               </li>
-              <li class="skill">
+              <li class="skill" data-aos="fade-up" data-aos-delay="1200">
                 <div class="skill_svg">
                     <svg>
                       <circle class="circle_d" r="27%" cx="35%" cy="36%" />
@@ -158,28 +173,288 @@
                     </svg>
                 </div>
                 <div class="skill_txt">
-                  <span class="skills-num counter">90</span>
-                  <span class="percent">%</span>
-                  <span class="skill_tit">Adobe XD</span>              
+                  <span class="skills-num poppins">90</span>
+                  <span class="percent poppins">%</span>
+                  <span class="skill_tit poppins">Adobe XD</span>              
                 </div>
               </li>
             </ul>
           </div>
         </div>
       </section>
+      <section id="flow">
+        <div class="flow_wrap">
+          <div class="cover">
+            <p class="first_parallel">Creative&nbsp;Visual&nbsp;Innovation&nbsp;Creative&nbsp;Visual&nbsp;Innovation&nbsp;</p>
+          </div>
+          <div class="cover">
+            <p class="second_parallel">Creative&nbsp;Visual&nbsp;Innovation&nbsp;Creative&nbsp;Visual&nbsp;Innovation&nbsp;</p>
+          </div>
+        </div>
+      </section>
       <!-- portfolio -->
-      <section id="portfolio" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="ease-in-out">
-        
+      <section id="portfolio" class="inner">
+        <h3 class="notoserif split">works</h3>
+        <article class="port_wrap">
+          <ul class="port_list" data-aos="fade-up">
+            <li class="port">
+              <a href="https://bebegene.edgc.com/" target="_blank">
+                <div class="list_img">
+                  <img src="/images/main/port_img01.png" alt="">
+                </div>
+                <div class="list_txt">
+                  <p class="top">
+                    <span class="blue bold">반응형 웹</span>
+                    <span class="gray">퍼블리싱 100%</span>
+                  </p>
+                  <p class="bot tit bold">
+                    bebegene
+                    <span class="scroll_inner">
+                      <span></span>
+                    </span>
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="port">
+              <a href="http://mbiomet.com/" target="_blank">
+                <div class="list_img">
+                  <img src="/images/main/port_img02.png" alt="">
+                </div>
+                <div class="list_txt">
+                  <p class="top">
+                    <span class="blue bold">반응형 웹</span>
+                    <span class="gray">퍼블리싱 100%</span>
+                  </p>
+                  <p class="bot tit bold">
+                    m-biomet
+                    <span class="scroll_inner">
+                      <span></span>
+                    </span>
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="port">
+              <a href="http://artmazed.com/" target="_blank">
+                <div class="list_img">
+                  <img src="/images/main/port_img03.png" alt="">
+                </div>
+                <div class="list_txt">
+                  <p class="top">
+                    <span class="blue bold">반응형 웹</span>
+                    <span class="gray">퍼블리싱 100%</span>
+                  </p>
+                  <p class="bot tit bold">
+                    선영디자인
+                    <span class="scroll_inner">
+                      <span></span>
+                    </span>
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="port">
+              <a href="https://charmdorae2023.cafe24.com/" target="_blank">
+                <div class="list_img">
+                  <img src="/images/main/port_img04.png" alt="">
+                </div>
+                <div class="list_txt">
+                  <p class="top">
+                    <span class="blue bold">반응형 웹</span>
+                    <span class="gray">퍼블리싱 100%</span>
+                  </p>
+                  <p class="bot tit bold">
+                    참도래
+                    <span class="scroll_inner">
+                      <span></span>
+                    </span>
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="port">
+              <a href="https://labecotec.cafe24.com/" target="_blank">
+                <div class="list_img">
+                  <img src="/images/main/port_img05.png" alt="">
+                </div>
+                <div class="list_txt">
+                  <p class="top">
+                    <span class="blue bold">반응형 웹</span>
+                    <span class="gray">퍼블리싱 100%</span>
+                  </p>
+                  <p class="bot tit bold">
+                    에코테크놀로지
+                    <span class="scroll_inner">
+                      <span></span>
+                    </span>
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="port">
+              <a href="https://suksungdam.cafe24.com/" target="_blank">
+                <div class="list_img">
+                  <img src="/images/main/port_img06.png" alt="">
+                </div>
+                <div class="list_txt">
+                  <p class="top">
+                    <span class="blue bold">반응형 웹</span>
+                    <span class="gray">퍼블리싱 100%</span>
+                  </p>
+                  <p class="bot tit bold">
+                    숙성담
+                    <span class="scroll_inner">
+                      <span></span>
+                    </span>
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="port">
+              <a href="https://freshour2023.cafe24.com/" target="_blank">
+                <div class="list_img">
+                  <img src="/images/main/port_img07.png" alt="">
+                </div>
+                <div class="list_txt">
+                  <p class="top">
+                    <span class="blue bold">반응형 웹</span>
+                    <span class="gray">퍼블리싱 100%</span>
+                  </p>
+                  <p class="bot tit bold">
+                    프레쉬아워
+                    <span class="scroll_inner">
+                      <span></span>
+                    </span>
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="port">
+              <a href="http://allivecoat.com/" target="_blank">
+                <div class="list_img">
+                  <img src="/images/main/port_img08.png" alt="">
+                </div>
+                <div class="list_txt">
+                  <p class="top">
+                    <span class="blue bold">반응형 웹</span>
+                    <span class="gray">퍼블리싱 100%</span>
+                  </p>
+                  <p class="bot tit bold">
+                    제니스
+                    <span class="scroll_inner">
+                      <span></span>
+                    </span>
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="port">
+              <a href="http://neotec21.com/" target="_blank">
+                <div class="list_img">
+                  <img src="/images/main/port_img09.png" alt="">
+                </div>
+                <div class="list_txt">
+                  <p class="top">
+                    <span class="blue bold">반응형 웹</span>
+                    <span class="gray">퍼블리싱 100%</span>
+                  </p>
+                  <p class="bot tit bold">
+                    네오텍
+                    <span class="scroll_inner">
+                      <span></span>
+                    </span>
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="port">
+              <a href="https://oncocatch.cafe24.com/" target="_blank">
+                <div class="list_img">
+                  <img src="/images/main/port_img10.png" alt="">
+                </div>
+                <div class="list_txt">
+                  <p class="top">
+                    <span class="blue bold">PC 웹</span>
+                    <span class="gray">퍼블리싱 100%</span>
+                  </p>
+                  <p class="bot tit bold">
+                    온코캐치
+                    <span class="scroll_inner">
+                      <span></span>
+                    </span>
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="port">
+              <a href="http://sushitour.co.kr/" target="_blank">
+                <div class="list_img">
+                  <img src="/images/main/port_img11.png" alt="">
+                </div>
+                <div class="list_txt">
+                  <p class="top">
+                    <span class="blue bold">반응형 웹</span>
+                    <span class="gray">퍼블리싱 90%</span>
+                  </p>
+                  <p class="bot tit bold">
+                    스시투어
+                    <span class="scroll_inner">
+                      <span></span>
+                    </span>
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="port">
+              <a href="https://stsrobotech.com/" target="_blank">
+                <div class="list_img">
+                  <img src="/images/main/port_img12.png" alt="">
+                </div>
+                <div class="list_txt">
+                  <p class="top">
+                    <span class="blue bold">반응형 웹</span>
+                    <span class="gray">퍼블리싱 100%</span>
+                  </p>
+                  <p class="bot tit bold">
+                    STS로보테크
+                    <span class="scroll_inner">
+                      <span></span>
+                    </span>
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </article>
       </section>
       <!-- contact -->
       <section id="contact">
+        <div class="inner" data-aos="fade-up">
+          <h3 class="notoserif split">contact</h3>
+          <p class="mail notoserif" data-aos="fade-up">manju0504@naver.com</p>
+          <p class="contact_txt">
+            저와 나누고 싶은이야기가 있나요? <br>
+            다양한 의견을 듣고 배우며 <br>
+            어떤 말씀이건 소중히 담아듣겠습니다.
+          </p>
+          <p class="mailto">
+            <a href="mailto:manju0504@naver.com">
+              메일 보내기
+              <span class="scroll_inner">
+                <span></span>
+              </span>
+            </a>
+          </p>
+        </div>
       </section>
     </div>
     <!-- footer -->
     <footer id="footer">
-      <!-- copyright -->
-      <p class="thank">Thank you for visitiong my page ♥</p>
-      <p class="copyright">Copyright &#169; 2022 Lee Min-Ju</p>
+      <p class="footer_p">
+        This site is made by Minju <br>
+        (C) 2023 jualee.net
+      </p>
     </footer>
   </div>
   <script src="/script/script.js"></script>
