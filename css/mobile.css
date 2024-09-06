@@ -126,6 +126,7 @@
 
 	#portfolio .port_list > li {
 		width: 100%;
+		max-width: 100%;
 	}
 
 	#portfolio .port_list > li.show:nth-child(even) {
