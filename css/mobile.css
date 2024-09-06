@@ -37,7 +37,11 @@
 @media screen and (max-width: 1024px){
 	.text {
 		font-size: 10rem;
-	}	
+	}
+	
+	#about .profile_wrap {
+		gap: 46px;
+	}
 }
 
 
