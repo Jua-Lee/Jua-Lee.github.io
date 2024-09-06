@@ -37,8 +37,11 @@
 @media screen and (max-width: 1024px){
 	.text {
 		font-size: 10rem;
-	}
-	
+	}	
+}
+
+
+@media screen and (max-width: 884px){	
 	#portfolio .port_list {
 		gap: 62px 0;
 		justify-content: space-between;
@@ -48,5 +51,4 @@
 		flex: unset;
 		width: 48%;
 	}
-	
 }
