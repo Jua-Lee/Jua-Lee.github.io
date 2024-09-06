@@ -79,6 +79,14 @@
 		top: auto;
 		transform: translate(0, 0);
 	}
+
+	#skill ul.skills {
+		justify-content: space-between;
+	}
+
+	#skill ul.skills li {
+		width: 48%;
+	}
 	
 	#portfolio .port_list {
 		gap: 62px 0;
