@@ -124,6 +124,14 @@
 		width: 100%;
 	}
 
+	.cover {
+		font-size: 10rem;
+	}
+
+	.cover:nth-child(2) {
+		margin-top: -3vh;
+	}
+
 	#portfolio .port_list > li {
 		width: 100%;
 		max-width: 100%;
