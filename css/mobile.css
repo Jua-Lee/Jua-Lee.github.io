@@ -101,4 +101,12 @@
 		flex: unset;
 		width: 48%;
 	}
+
+	#portfolio .port_list > li.show {
+		transform: translateY(0);
+	}
+
+	#portfolio .port_list > li.show:nth-child(3n-1) {
+		transform: translateY(0);
+	}
 }
