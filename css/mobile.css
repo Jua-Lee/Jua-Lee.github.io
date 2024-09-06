@@ -109,4 +109,8 @@
 	#portfolio .port_list > li.show:nth-child(3n-1) {
 		transform: translateY(0);
 	}
+
+	#portfolio .port_list > li.show:nth-child(even) {
+		transform: translateY(-20px);
+	}
 }
