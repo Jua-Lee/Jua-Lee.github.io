@@ -24,6 +24,19 @@
 		height: 380px;
 	}
 
+	#about .profile_wrap {
+		flex-wrap: wrap;
+	}
+
+	#about .profile_wrap .profile {
+		width: 100%;
+	}
+
+	#about .profile_wrap .profile_right {
+		flex: unset;
+		width: 100%;
+	}
+
 	#skill ul.skills {
 		gap: 60px 0;
 		justify-content: center;
