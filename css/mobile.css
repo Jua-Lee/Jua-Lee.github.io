@@ -111,6 +111,6 @@
 	}
 
 	#portfolio .port_list > li.show:nth-child(even) {
-		transform: translateY(-20px);
+		transform: translateY(50px);
 	}
 }
