@@ -155,3 +155,10 @@
 		height: 38vh;
 	}
 }
+
+@media screen and (max-width: 320px){
+	.text {
+		font-size: 3.8rem;
+		line-height: 185%;
+	}
+}
