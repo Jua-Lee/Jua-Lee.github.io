@@ -53,6 +53,18 @@
 	.text {
 		font-size: 7rem;
 	}
+
+	#about {
+		padding: 6vh 0;
+		height: auto;
+	}
+
+	#about .inner {
+		position: relative;
+		left: auto;
+		top: auto;
+		transform: translate(0, 0);
+	}
 	
 	#portfolio .port_list {
 		gap: 62px 0;
