@@ -151,6 +151,10 @@
 }
 
 @media screen and (max-width: 460px){
+	#contact .mail {
+		font-size: 2.8rem;
+	}
+	
 	#skill ul.skills li {
 		width: 100%;
 	}
