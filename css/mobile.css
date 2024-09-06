@@ -87,6 +87,10 @@
 	#skill ul.skills li {
 		width: 48%;
 	}
+
+	#skill .skill_svg svg {
+		height: 270px;
+	}
 	
 	#portfolio .port_list {
 		gap: 62px 0;
