@@ -42,6 +42,10 @@
 	#about .profile_wrap {
 		gap: 46px;
 	}
+
+	#flow {
+		margin-top: 10vh;
+	}
 }
 
 
