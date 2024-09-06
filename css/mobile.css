@@ -50,6 +50,7 @@
 @media screen and (max-width: 1024px){
 	.text {
 		font-size: 10rem;
+		line-height: 160%;
 	}
 	
 	#about .profile_wrap {
