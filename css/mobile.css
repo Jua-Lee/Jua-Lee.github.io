@@ -120,6 +120,10 @@
 		font-size: 5rem;
 	}
 
+	#portfolio .port_list {
+		width: 100%;
+	}
+
 	#portfolio .port_list > li {
 		width: 100%;
 	}
