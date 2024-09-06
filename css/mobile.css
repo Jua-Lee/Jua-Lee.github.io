@@ -114,3 +114,21 @@
 		transform: translateY(50px);
 	}
 }
+
+@media screen and (max-width: 640px){
+	.text {
+		font-size: 5rem;
+	}
+
+	#portfolio .port_list > li {
+		width: 100%;
+	}
+
+	#portfolio .port_list > li.show:nth-child(even) {
+		transform: translateY(0);
+	}
+
+	#contact .mail {
+		font-size: 4rem;
+	}
+}
