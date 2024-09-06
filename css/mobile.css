@@ -151,6 +151,10 @@
 }
 
 @media screen and (max-width: 460px){
+	h3 {
+		font-size: 5rem;
+	}
+	
 	.text {
 		font-size: 3.8rem;
 		line-height: 200%;
