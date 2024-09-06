@@ -145,3 +145,13 @@
 		font-size: 4rem;
 	}
 }
+
+@media screen and (max-width: 460px){
+	#skill ul.skills li {
+		width: 100%;
+	}
+
+	#skill .skill_svg svg {
+		height: 38vh;
+	}
+}
