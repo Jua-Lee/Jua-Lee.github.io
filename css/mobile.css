@@ -151,6 +151,11 @@
 }
 
 @media screen and (max-width: 460px){
+	.text {
+		font-size: 3.8rem;
+		line-height: 200%;
+	}
+	
 	#contact .mail {
 		font-size: 2.8rem;
 	}
@@ -161,12 +166,5 @@
 
 	#skill .skill_svg svg {
 		height: 38vh;
-	}
-}
-
-@media screen and (max-width: 320px){
-	.text {
-		font-size: 3.8rem;
-		line-height: 185%;
 	}
 }
