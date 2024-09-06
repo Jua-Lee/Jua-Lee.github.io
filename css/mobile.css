@@ -50,6 +50,10 @@
 
 
 @media screen and (max-width: 884px){	
+	.text {
+		font-size: 7rem;
+	}
+	
 	#portfolio .port_list {
 		gap: 62px 0;
 		justify-content: space-between;
